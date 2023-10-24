@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" />
+    <script src="jquery-2.1.4.min.js"></script>
+    <script src="Contacts.js"></script>
+    <title>Gestionnaire de contacts</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="Titre">Gestionnaire de contacts</h1>
+    </header>
+    
+    <section>
+        <article id="formContacts">
+            <header>
+                <h1>Ajout d'un contact</h1>
+            </header>
+            <details>
+                <summary>
+                    Cliquer pour voir le formulaire.
+                </summary>
+                <form method="post" id="contact-form">
+                    <fieldset>
+                        <legend>Nouveau contact</legend>
+                        <label>
+                            <span>Nom :</span>
+                            <input id="nom" name="nom" required maxlength="32" pattern="^[^%&$]*$" >
+                        </label>
+                        <label>
+                            <span>Prénom :</span>
+                            <input id="prenom" name="prenom" required maxlength="32" pattern="^[^%&$]*$" >
+                        </label>
+                        <label>
+                            <span>Téléphone :</span>
+                            <input type="tel" id="telephone" name="telephone" required maxlength="32" pattern="^[^%&$]*$" placeholder="+216 99 99 99">
+
+                        </label>
+
+                        <label>
+                            <span>Email :</span>
+                            <input type="email" id="email" name="email" pattern=".*@enit\.utm\.tn$" >
+                        </label>
+                        <label>
+                            <span>Date de naissance :</span>
+                            <input type="date" id="dateNaissance" required onchange="verifDate()" style="background-color: #FF6347 ;">
+                        </label>
+                        <label>
+                            <span>Nombre d'enfants :</span>
+                            0 <input type="range" id="nombreEnfants" name="nombreEnfants" min="0" max="5"> 5
+                        </label>
+                    </fieldset>
+                    <button id="Ajouter-client" type="submit">OK</button>
+                </form>
+            </details>
+        </article>
+        <article id="contacts">
+            <header>
+                <h1>Liste des contacts</h1>
+            </header>
+            <table id="tableContacts">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Prénom</th>
+                        <th>Nom</th>
+                        <th>Téléphone</th>
+                        <th>Email</th>
+                        <th>Date de naissance</th>
+                        <th>Nombre enfants</th>
+                        <th>Supprimer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <script>
+                
+            </script>
+            <audio id="poubelleSound" src="PoubelleSound.mp3" preload="auto"></audio>
+            <img src="poubelle.png" id="poubelle">
+        </article>
+    </section>
+
+  
+    <footer>Enit - Formation HTML5 </footer>
+</body>
