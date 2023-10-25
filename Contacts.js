@@ -28,7 +28,6 @@ function SupprimeContact(n) {
     if (n >= 0 && n < contacts.length) {
         contacts.splice(n, 1);
         localStorage.setItem('contacts', JSON.stringify(contacts));
-        //construitTable(contacts);
     }
 }
 
